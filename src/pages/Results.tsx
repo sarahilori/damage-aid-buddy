@@ -70,6 +70,32 @@ const Results = () => {
         recommendations: ['Avoid direct contact', 'Use protective equipment', 'Professional testing']
       }
     ],
+    'Flooding': [
+      {
+        type: 'Contaminated Floodwater',
+        level: 'high',
+        description: 'Floodwater contains dangerous bacteria, chemicals, and sewage that pose immediate health risks',
+        recommendations: ['Evacuate if water is rising', 'Never walk through moving water', 'Avoid all contact with floodwater', 'Seek tetanus shot if exposed']
+      },
+      {
+        type: 'Hidden Structural Damage',
+        level: 'high',
+        description: 'Flooding can weaken foundations and structural supports not visible from surface inspection',
+        recommendations: ['Professional structural assessment', 'Avoid entering flooded buildings', 'Check foundation integrity']
+      },
+      {
+        type: 'Electrical Hazards',
+        level: 'high',
+        description: 'Standing water combined with electrical systems creates electrocution risk',
+        recommendations: ['Turn off power at main breaker if safe to do so', 'Never enter flooded areas with electricity on', 'Professional electrical inspection required']
+      },
+      {
+        type: 'Mold and Air Quality',
+        level: 'high',
+        description: 'Rapid mold growth occurs within 24-48 hours after flooding, even in hidden areas',
+        recommendations: ['Document all damage immediately', 'Begin water removal within 24 hours', 'Professional mold remediation', 'Use N95 masks']
+      }
+    ],
     'Fire Damage': [
       {
         type: 'Smoke Inhalation',
@@ -112,6 +138,7 @@ const Results = () => {
 
   const COST_ESTIMATES: Record<string, { low: number; medium: number; high: number }> = {
     'Water Damage': { low: 2500, medium: 7500, high: 15000 },
+    'Flooding': { low: 8000, medium: 25000, high: 85000 },
     'Fire Damage': { low: 5000, medium: 25000, high: 75000 },
     'Structural Damage': { low: 10000, medium: 35000, high: 100000 },
     'Roof Damage': { low: 3000, medium: 12000, high: 30000 },

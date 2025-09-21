@@ -51,9 +51,10 @@ const Upload = () => {
       // Store photos for analysis results
       localStorage.setItem('damagePhotos', JSON.stringify(photos));
       
-      // Enhanced AI damage detection with hidden health risk analysis
+      // Enhanced AI damage detection with flooding detection capabilities
       const damageTypes = [
         'Water Damage',
+        'Flooding',
         'Fire Damage', 
         'Structural Damage',
         'Roof Damage',
