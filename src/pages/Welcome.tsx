@@ -35,7 +35,7 @@ const Welcome = () => {
       <div className="max-w-4xl w-full space-y-8">
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-6xl font-bold text-foreground">
-            Damage Aid Buddy
+            Damage Detective
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Your comprehensive post-disaster assessment tool for cost estimation, 
