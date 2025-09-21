@@ -94,15 +94,22 @@ const Profile = () => {
                 <Label htmlFor="budget">Budget Range *</Label>
                 <div className="relative">
                   <DollarSign className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                  <Input
+                  <select
                     id="budget"
-                    type="text"
                     value={profile.budget}
                     onChange={(e) => setProfile(prev => ({ ...prev, budget: e.target.value }))}
-                    placeholder="e.g., $10,000 - $50,000"
-                    className="pl-10"
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 pl-10 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     required
-                  />
+                  >
+                    <option value="">Select your budget range</option>
+                    <option value="Under $500">Under $500 (Emergency repairs)</option>
+                    <option value="$500 - $1,500">$500 - $1,500 (Minor repairs)</option>
+                    <option value="$1,500 - $3,000">$1,500 - $3,000 (Small projects)</option>
+                    <option value="$3,000 - $7,500">$3,000 - $7,500 (Moderate repairs)</option>
+                    <option value="$7,500 - $15,000">$7,500 - $15,000 (Major repairs)</option>
+                    <option value="$15,000 - $30,000">$15,000 - $30,000 (Extensive work)</option>
+                    <option value="Over $30,000">Over $30,000 (Full restoration)</option>
+                  </select>
                 </div>
               </div>
 
