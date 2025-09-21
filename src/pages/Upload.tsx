@@ -51,7 +51,7 @@ const Upload = () => {
       // Store photos for analysis results
       localStorage.setItem('damagePhotos', JSON.stringify(photos));
       
-      // Enhanced AI damage detection with flooding detection capabilities
+      // Enhanced AI damage detection - always detects water damage
       const damageTypes = [
         'Water Damage',
         'Flooding',
@@ -63,7 +63,7 @@ const Upload = () => {
       
       // Simulate advanced AI analysis that can detect hidden risks
       const detectedDamage = {
-        type: damageTypes[Math.floor(Math.random() * damageTypes.length)],
+        type: 'Water Damage',
         severity: ['Minor', 'Moderate', 'Severe'][Math.floor(Math.random() * 3)],
         confidence: (85 + Math.random() * 15).toFixed(1) + '%',
         hiddenRisks: [
