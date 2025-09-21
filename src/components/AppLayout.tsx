@@ -52,9 +52,11 @@ const AppLayout = ({ children }: AppLayoutProps) => {
             <SidebarGroupContent>
               <div className="px-3 py-2 mb-4">
                 <div className="flex items-center gap-2">
-                  <Shield className="h-6 w-6 text-primary" />
+                  <div className="flex items-center justify-center w-8 h-8 bg-primary text-primary-foreground rounded-md font-bold text-sm">
+                    DD
+                  </div>
                   {!isCollapsed && (
-                    <span className="font-bold text-lg">Damage Aid</span>
+                    <span className="font-bold text-lg">Damage Detective</span>
                   )}
                 </div>
               </div>

@@ -52,10 +52,16 @@ const Results = () => {
   const HEALTH_RISKS: Record<string, HealthRisk[]> = {
     'Water Damage': [
       {
-        type: 'Mold Growth',
+        type: 'Hidden Mold Growth',
         level: 'high',
-        description: 'High risk of toxic mold development within 24-48 hours',
-        recommendations: ['Immediate water extraction', 'Professional mold inspection', 'Use dehumidifiers']
+        description: 'AI detected potential mold growth in wall cavities and hidden areas, even if not visible in photos',
+        recommendations: ['Immediate water extraction', 'Professional mold inspection with thermal imaging', 'Use dehumidifiers']
+      },
+      {
+        type: 'Compromised Water Quality',
+        level: 'high',
+        description: 'Water contamination likely affecting drinking water supply',
+        recommendations: ['Test water immediately', 'Use bottled water only', 'Professional water system inspection']
       },
       {
         type: 'Bacterial Contamination',
@@ -359,6 +365,10 @@ const Results = () => {
               <Button variant="outline" className="w-full">
                 <Phone className="h-4 w-4 mr-2" />
                 Electric Emergency: 1-800-611-1911
+              </Button>
+              <Button variant="outline" className="w-full">
+                <Phone className="h-4 w-4 mr-2" />
+                DFS Disaster Hotline: 1-800-339-1759
               </Button>
             </div>
           </CardContent>

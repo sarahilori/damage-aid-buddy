@@ -51,7 +51,7 @@ const Upload = () => {
       // Store photos for analysis results
       localStorage.setItem('damagePhotos', JSON.stringify(photos));
       
-      // Simulate AI damage detection
+      // Enhanced AI damage detection with hidden health risk analysis
       const damageTypes = [
         'Water Damage',
         'Fire Damage', 
@@ -60,10 +60,17 @@ const Upload = () => {
         'Electrical Damage'
       ];
       
+      // Simulate advanced AI analysis that can detect hidden risks
       const detectedDamage = {
         type: damageTypes[Math.floor(Math.random() * damageTypes.length)],
         severity: ['Minor', 'Moderate', 'Severe'][Math.floor(Math.random() * 3)],
-        confidence: (85 + Math.random() * 15).toFixed(1) + '%'
+        confidence: (85 + Math.random() * 15).toFixed(1) + '%',
+        hiddenRisks: [
+          'Potential mold growth in wall cavities',
+          'Compromised water quality detected',
+          'Electrical hazards not visible in photos',
+          'Air quality concerns from particulates'
+        ]
       };
       
       localStorage.setItem('aiAnalysis', JSON.stringify(detectedDamage));
@@ -198,7 +205,7 @@ const Upload = () => {
                 <Loader2 className="h-8 w-8 animate-spin mx-auto text-primary" />
                 <p className="font-medium">AI Analysis in Progress</p>
                 <p className="text-sm text-muted-foreground">
-                  Identifying damage types, severity, and potential health risks...
+                  Analyzing visible damage and scanning for hidden health risks like mold, water quality issues, and electrical hazards...
                 </p>
               </div>
             </CardContent>

@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Button } from '@/components/ui/button';
 import { 
   Droplets, 
   Flame, 
@@ -344,7 +345,7 @@ const Education = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
               <div className="text-center p-4 bg-background rounded-lg">
                 <p className="font-semibold text-destructive">Emergency Services</p>
                 <p className="text-2xl font-bold">911</p>
@@ -354,6 +355,10 @@ const Education = () => {
                 <p className="text-lg font-bold">1-800-222-1222</p>
               </div>
               <div className="text-center p-4 bg-background rounded-lg">
+                <p className="font-semibold">DFS Disaster Hotline</p>
+                <p className="text-lg font-bold">1-800-339-1759</p>
+              </div>
+              <div className="text-center p-4 bg-background rounded-lg">
                 <p className="font-semibold">Gas Emergency</p>
                 <p className="text-lg font-bold">1-800-427-2200</p>
               </div>
@@ -361,6 +366,29 @@ const Education = () => {
                 <p className="font-semibold">Electric Emergency</p>
                 <p className="text-lg font-bold">1-800-611-1911</p>
               </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* FEMA Resources */}
+        <Card className="border-primary/20 bg-primary/5">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-primary">
+              <Shield className="h-5 w-5" />
+              Federal Resources & Support
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="text-center">
+              <h3 className="text-lg font-semibold mb-2">FEMA Disaster Assistance</h3>
+              <p className="text-muted-foreground mb-4">
+                Apply for federal disaster assistance if your area has been declared a disaster zone
+              </p>
+              <Button asChild className="w-full md:w-auto">
+                <a href="https://www.disasterassistance.gov/" target="_blank" rel="noopener noreferrer">
+                  Apply for FEMA Assistance
+                </a>
+              </Button>
             </div>
           </CardContent>
         </Card>
